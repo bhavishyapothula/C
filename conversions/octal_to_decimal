@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+
+	int remainder, number = 0, decimal_number = 0,pow = 1;
+	printf("/n Enter octal number ");
+	scanf("%d", &number);
+	while(number > 0) 
+  {
+	
+		remainder = number % 10;
+		decimal_number+= remainder * pow;
+		pow = pow*8;		//to genrete powers of 8
+    number = number / 10;
+	
+	}
+
+	printf("Demimal number:%d\n", decimal_number);
+}
